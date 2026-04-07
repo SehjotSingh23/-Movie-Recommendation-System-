@@ -311,6 +311,10 @@ def load_pickles():
 # =========================
 # ROUTES
 # =========================
+@app.get("/")
+def home():
+    return {"message": "Movie Recommendation API is running"}
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
